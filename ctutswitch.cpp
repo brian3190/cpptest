@@ -25,7 +25,7 @@ int main(){
 
   switch(greetingOption){
     case 1:
-      cout << "bonjour" << endl;
+      cout << "Bonjour" << endl;
       break;
     case 2:
       cout << "Hallo" << endl;
@@ -37,7 +37,9 @@ int main(){
       cout << "Hello" << endl;
   }
 
-  int largestNum (5>2)? 5 : 2;
+  int largestNum = (5>2)? 5 : 2;
+
+  cout << largestNum << endl;
 
   int myFavNums[5];
 

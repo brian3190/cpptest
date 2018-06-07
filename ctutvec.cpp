@@ -24,11 +24,7 @@ int main() {
 
   lotteryNumVect.pop_back();
 
-  cout << "Size" << lotteryNumVect.size() << endl;
-
-  
-
-
+  cout << "Size " << lotteryNumVect.size() << endl;
 
   return 0;
 
