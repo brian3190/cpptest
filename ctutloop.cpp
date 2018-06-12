@@ -77,7 +77,7 @@ int main(){
 
   double eulersConstant = .57721;
   string eulerGuess;
-  double eulerrGuessDouble;
+  double eulerGuessDouble;
 
   cout << "What is Euler's Constant?" ;
   getline(cin, eulerGuess);
