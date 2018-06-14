@@ -1,3 +1,7 @@
+#include <iostream>
+
+using namespace std;
+
 template <class T>
 class Pair{
   private:
@@ -14,6 +18,8 @@ T Pair<T>::bigger(){
   return (first>second?first:second);
 }
 
-template <class int>
-Pair <int> obj(11,22);
-cout << obj.bigger();
+
+int main(){
+  Pair <int> obj(11,22);
+  cout << obj.bigger();
+}
