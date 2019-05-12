@@ -1,5 +1,8 @@
 #include <string>
 #include <iostream>
+#include <vector>
+
+using namespace std;
 
 struct Vector {
   int sz;
@@ -16,3 +19,8 @@ void f(Vector v, Vector& rv, Vector* pv){
   int i2 = rv.sz;
   int i4 = pv->sz;
 };
+
+int main() {
+  // TODO: test vectors
+  return 0;
+}
