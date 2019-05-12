@@ -9,7 +9,7 @@ int main()
   // empty map container
   map<int, int> test;
 
-  // insert elements in random order
+  // insert elements in order
   test.insert(pair<int, int>(1, 40));
   test.insert(pair<int, int>(2, 30));
   test.insert(pair<int, int>(3, 60));
