@@ -8,16 +8,15 @@ using namespace std;
 int main(){
   int randNum = (rand() % 100) + 1;
 
+  // While Loop
   while(randNum != 100){
     cout << randNum << ", ";
 
     randNum = (rand() % 100) + 1;
   }
-
   cout << endl;
 
   int index = 1;
-
   while(index <= 10){
 
     cout << index << endl;
@@ -25,34 +24,28 @@ int main(){
     index++;
   }
 
+
+  // Do... While loop
   string numberGuessed;
   int intNumberGuessed = 0;
 
   do {
     cout << "Guess between 1 and 10: ";
-
     getline(cin, numberGuessed);
-
     intNumberGuessed = stoi(numberGuessed);
-
     cout << intNumberGuessed << endl;
-
-
   } while(intNumberGuessed != 4);
-
   cout << "You win" << endl;
-  // C way
+
+  // C way - String Manipulations
   char happyArray[6] = {'H', 'a', 'p', 'p', 'y', '\0'};
-
-  string birthdayString = " Birthday";
-
+  string birthdayString = "Birthday";
   cout << happyArray + birthdayString << endl;
-
   string yourName;
-  cout << "What is your name ";
+  cout << "What is your name? ";
   getline(cin, yourName);
 
-  cout << "hello " << yourName << endl;
+  cout << "Hello " << yourName << endl;
 
   string wholeName = yourName.assign(yourName);
   cout << wholeName << endl;
@@ -75,6 +68,8 @@ int main(){
   yourName.replace(6, 5, "Maximus");
   cout << yourName << endl;
 
+
+  //
   double eulersConstant = .57721;
   string eulerGuess;
   double eulerGuessDouble;
@@ -82,6 +77,7 @@ int main(){
   cout << "What is Euler's Constant?" ;
   getline(cin, eulerGuess);
 
+  //string to double
   eulerGuessDouble = stod(eulerGuess);
 
   if(eulerGuessDouble == eulerConstant){
@@ -97,6 +93,7 @@ int main(){
   string dogString = "dog";
   string catString = "cat";
 
+  // String comparison
   cout << dogString.compare(catString) << endl;
   cout << dogString.compare(dogString) << endl;
   cout << catString.compare(dogString) << endl;

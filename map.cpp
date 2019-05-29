@@ -31,7 +31,7 @@ int main()
   // Assigning the elements from test to test2
   map<int, int> test2(test.begin(), test.end());
 
-  // print all elements of map test2
+  // Print all elements of map test2
   cout << "\nThe map test2 after"
        << " assign from test is : \n";
   cout << "\tKEY\tELEMENT\n";
@@ -41,7 +41,7 @@ int main()
   }
   cout << endl;
 
-  //remove all elements up to element with key=4 in test
+  // Remove all elements up to element with key=4 in test
   cout << "\ntest2 after removal of elements less than key=4 : \n";
   cout << "\tKEY\tELEMENT\n";
   test2.erase(test2.begin(), test2.find(4));
@@ -50,7 +50,7 @@ int main()
              << '\t' << itr->second << '\n';
     }
 
-    // remove all elements with key = 4
+    // Rmove all elements with key = 4
     int num;
     num = test2.erase(4);
     cout << "\ntest2.erase(4) : ";

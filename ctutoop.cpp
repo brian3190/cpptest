@@ -34,7 +34,7 @@ class Animal {
     void toString();
 };
 
-//Declase variables
+//Declare variables
 //Static variables
 int Animal::numOfAnimals = 0;
 
