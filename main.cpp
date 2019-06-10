@@ -1,10 +1,13 @@
 #include <iostream>
 
-void Log(const char* message);
+void Log(const char* c){
+  std::cout << c;
+};
 
 int Multiply(int a, int b)
 {
   Log("Multiply");
+  std::cout << "\n";
   return a * b;
 }
 

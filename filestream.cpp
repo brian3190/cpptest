@@ -4,7 +4,7 @@ using namespace std;
 
 int main(){
   string line;
-  ifstream MyFile("test.txt");
+  ifstream MyFile("somequote.txt");
   while(getline(MyFile, line)){
     cout<<line<<'\n';
   }

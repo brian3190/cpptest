@@ -5,7 +5,7 @@ using namespace std;
 int main(){
   ofstream MyFile;
   MyFile.open("test.txt");
-  //ofstream MyFIle("test.txt"); //path to file as constructor
+  //ofstream MyFile("test.txt"); //path to file as constructor
 
   if(MyFile.is_open()){
     MyFile << "Some text. \n";

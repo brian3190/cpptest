@@ -15,11 +15,11 @@ int main(){
   }
 
   try{
-    int num1;
+    float num1;
     cout<<"Enter the first number:";
     cin >> num1;
 
-    int num2;
+    float num2;
     cout<<"Enter the second number:";
     cin >> num2;
 
@@ -27,7 +27,7 @@ int main(){
       throw 0;
     }
 
-    cout <<"Result:"<< num1/num2 << endl;
+    cout <<"Result: "<< (float)num1/num2 << endl;
   }
   catch(...) { //catch any type of exception
     cout<< "Division by zero!";
