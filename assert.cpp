@@ -13,6 +13,7 @@ int main ()
   int * b = NULL;
   int * c = NULL;
 
+  // b now has value of a
   b=&a;
 
   print_number (b);

@@ -15,7 +15,6 @@ int main()
 {
   //stack allocation
   //when scope {} ends, all memory allocated in stack is deleted.
-  int value = 5;
   int array[5];
   array[0] = 1;
   array[1] = 2;

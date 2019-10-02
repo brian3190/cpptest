@@ -1,6 +1,9 @@
 #include <iostream>
+#include <string>
 
-void Log(const char* message)
+int main()
 {
-  std::cout << message << std::endl;
+    std::string message;
+    std::cin >> message;
+    std::cout << message << std::endl;
 }

@@ -6,8 +6,8 @@ using namespace std;
 
 int main(int argc, string argv[]){
   string s;
-  cout << "Please enter a string: " << endl;
-  getline(cin, s);
+  cout << "Please enter a string ending with 'd': " << endl;
+  getline(cin, s, 'd');
 
   cout << "You entered:" << s << endl;
 
