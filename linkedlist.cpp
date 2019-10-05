@@ -4,7 +4,7 @@
 struct Node
 {
   int data;
-  Node* next;
+  Node *next;
 };
 
 void initNode(Node *head, int n){
@@ -14,7 +14,8 @@ void initNode(Node *head, int n){
 
 void addNode(Node *head, int n)
 {
-	head->data = n;
+	Node *newNode = new Node;
+    newNode->data = n;
 	newNode->next = NULL;
 
 	Node *cur = head;
@@ -37,9 +38,22 @@ void insertFront(Node *head, int n)
     *head = newNode;
 }
 
-Node *searchNode(Node *head, int n)
+void insertEnd(Node *head, int n)
 {
-    Node *cur = head;
+    Node *newNode = new Node;
+    if (head == NULL)
+    {
+        head->data = n
+        head->next = NULL;
+        return;
+    }
+
+    Node *temp =
+}
+
+Node* searchNode(Node* head, int n)
+{
+    Node* cur = head;
     while(cur){
         if(cur->data == n) return cur;
         cur = cur->next;
@@ -47,9 +61,9 @@ Node *searchNode(Node *head, int n)
     cout << "Node " << n << " not found.\n";
 }
 
-bool deleteNode(Node *head, Node *ptrDel)
+bool deleteNode(Node* head, Node *ptrDel)
 {
-    Node *cur = *head;
+    Node* cur = *head;
     if(ptrDel == *head)
     {
         *head = cur->next;

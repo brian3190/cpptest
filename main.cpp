@@ -13,6 +13,13 @@ int Multiply(int a, int b)
 
 int main()
 {
+  int *p;
+  if(true)
+  {
+    int x = 400;
+    p = &x;
+  }
+  std::cout << *p << std::endl; //prints 400 still dangling pointer?
   std::cout << Multiply(5, 8) << std::endl;
   std::cin.get();
 }

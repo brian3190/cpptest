@@ -3,7 +3,8 @@
 using namespace std;
 
 int factorial(int n){
-  if(n==1){
+  if(n==1 || n==0)
+  {
     return 1;
   } else {
     return n*factorial(n-1);
@@ -11,5 +12,9 @@ int factorial(int n){
 };
 
 int main(){
-  cout << factorial(5) << endl;
+    int n;
+    cout << "Factorialize a number:" << endl;
+    cin >> n;
+    cout << factorial(n) << endl;
+    cin.get();
 }
