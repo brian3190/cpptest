@@ -1,6 +1,8 @@
 #include <iostream>
 #include <cstdio>
 #include <vector>
+#include <algorithm>
+
 using namespace std;
 
 // Beginner implementation
@@ -23,11 +25,14 @@ int main() {
     cout << "Please key in 4 numbers:\n";
     scanf("%d %d %d %d", &a, &b, &c, &d);
     int ans = max_of_four(a, b, c, d);
+    cout << "max of four is:";
     printf("%d", ans);
     cout << "\n";
 
     vector<int> vec = { 2, 3, 4, 5, 3000};
 
+    //max_element
+    cout << "Max element is:";
     cout << *max_element(vec.begin(), vec.end());
 
     return 0;

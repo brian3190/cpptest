@@ -1,5 +1,6 @@
 #include "sqrt.cpp"
 #include <gtest/gtest.h>
+#include <vector>
 
 TEST(SquareRootTest, PositiveNos)
 {
@@ -13,6 +14,13 @@ TEST(SquareRootTest, NegativeNos)
 {
     ASSERT_EQ(-1.0, squareRoot(-15.0));
     ASSERT_EQ(-1.0, squareRoot(-0.2));
+}
+
+TEST(LengthTest, LengthEqual)
+{   
+    std::vector<int> x = {1, 2, 3};
+    std::vector<int> y = {2, 4, 6, 8, 10};
+    ASSERT_EQ(x.size(), y.size()) << "unequal length"; 
 }
 
 int main(int argc, char **argv)

@@ -15,8 +15,8 @@ int main(){
   *ptr = 10;
 
   cout << &x << endl; // 0x10978435 mem address
-  cout << *p << endl; // 5
-  cout << *ptr << endl; // 10
+  cout << *p << endl; // dereferencing: 5
+  cout << *ptr << endl; // dereferencing : 10
 
   delete ptr; // free up memory, p is dangling pointer
 
@@ -24,5 +24,6 @@ int main(){
 
   ptr = new int; // reuse for new address
 
-  cout << *ptr << endl;
+  cout << *ptr << endl; 
+  
 }
