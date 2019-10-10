@@ -19,11 +19,12 @@ void amend(struct Test t1)
 //Copies the struct object and changes it's values
 Test change(struct Test *t1)
 {
-    Test *pt1 = new Test;
+    Test *pt1;
+    pt1 = new Test;
     pt1->A[0] = 10;
     pt1->A[1] = 9;
-    pt1->A[2] = t1.n;
-    return pt1;
+    pt1->A[2] = *t1->n;
+    return &pt1;
 };
 
 int main()
@@ -40,3 +41,4 @@ int main()
 
     return 0;
 }
+
