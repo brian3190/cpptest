@@ -7,4 +7,6 @@ int main(){
   MyFile.open("test.txt");
 
   MyFile << "Some text. \n";
+  MyFile.close();
+  return 0;
 }
