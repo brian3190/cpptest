@@ -14,16 +14,23 @@ void print(char c){
 }
 
 int main(){
+  // fills array
   array<char,1000> arr;
   arr.fill('*');
 
-  auto t5 = steady_clock::now();
+
+  // times array
+  auto t5 = high_resolution_clock::now();
   for(char& x : arr){
     cout << x;
   }
-  auto t6 = steady_clock::now();
+
+  // stops timer 
+  std::chrono::high_resolution_clock::time_point t6 = high_resolution_clock::now();
   cout << "\n" << "Time for for_ref : " << duration_cast<nanoseconds>(t6-t5).count() << " nanoseconds" << endl;
 
+
+  // using steady_clock
   chrono::steady_clock::time_point t1 = chrono::steady_clock::now();
   for_each(arr.begin(), arr.end(), print);
   chrono::steady_clock::time_point t2 = chrono::steady_clock::now();
@@ -35,11 +42,11 @@ int main(){
   cout << "\n" << "Time in milliseconds (double) : " << t_end_each_milli.count() << "ms";
   cout << "\n" << "Time in seconds (double) : " << duration<double>(t_end_each).count() << "s" << endl;
 
-  auto t3 = steady_clock::now();
+  auto t3 = high_resolution_clock::now();
   for(int i = 0; i < sizeof(arr)/sizeof(arr[0]); ++i){
     cout << arr[i];
   }
-  auto t4 = steady_clock::now();
+  auto t4 = high_resolution_clock::now();
   cout << "\n" << "Time for for_loop : " << duration_cast<nanoseconds>(t4-t3).count() << " nanoseconds" << endl;
 
 }

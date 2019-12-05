@@ -27,9 +27,9 @@ int main(){
       throw 0;
     }
 
-    cout <<"Result: "<< (float)num1/num2 << endl;
+    cout <<"Result: "<< (float)num1/num2 << endl; //confirm cast float
   }
-  catch(...) { //catch any type of exception
+  catch(...) { //ellipsis catch any type of exception
     cout<< "Division by zero!";
   }
 }

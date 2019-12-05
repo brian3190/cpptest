@@ -21,6 +21,7 @@ int main(){
   for (auto i : vec2){
     cout << i << " ";
   };// vec2 = {4, 5, 2, 3, 7, 18}
+
   cout << '\n';
   sort(vec2.begin(), vec2.end());
   for_each(vec2.begin(), vec2.end(), [](int x){ cout << x << " "; }); // 2 3 4 5 7 18
@@ -46,11 +47,41 @@ int main(){
   //list<int>::iterator it;
   //++it;
   //--it;
+  list<int> li;
+  list<int>::reverse_iterator revlistiter;
+  li.push_back(1);
+  li.push_back(2);
+  li.push_back(3);
+
+  //Reverse traversal
+  cout << "Reverse traversal of list." << endl;
+  for(revlistiter = li.rbegin(); revlistiter != li.rend(); revlistiter++) {
+    cout << (*revlistiter) << endl;
+  }
+  
+  //Istreambuf_iterator
+  std::istreambuf_iterator<char> istreambuf(std::cin.rdbuf());  //reads characters a user types into terminal
+  std::string mystring;
+  std::string istreambuf_iterator<char> isbeos;
+  //loop until end of stream 
+  while (istreambuf != isbeos && *istreambuf != '\n'){
+    mystring += *istreambuf++;
+  }
+
+  //Istream_iterator
+   std::istream_iterator<int> is(std::cin);
 
   //Forward Iterator : forward_list
-  //forward_list<int>::iterator iter;
+  forward_list<int> fwdlist;
+  forward_list<int>::iterator iter;
   //++iter;
+  fwdlist.push_front(3);
+  fwdlist.push_front(2);
+  fwdlist.push_front(1);
 
+  cout << "Forward iterator traversal of forward_list."
+  for (iter = fwdlist.begin(); iter != fwdlist.end(); iter++) {
+    cout << (*iter) << endl;
   //Unordered containers have at least forward iterators
 
   //Input iterators - only read from dereferenced iterator while iterating forward
@@ -62,17 +93,18 @@ int main(){
   //Loops
   vector<int>vec5 = { 15, 12, 13, 19, 1, 18, 16, 14};
   vector<int>::iterator itera = min_element(vec5.begin(), vec5.end()); //min_element
-        //Sort
+  
+  //Sort
   sort(vec5.begin(), itera);
   for_each(vec5.begin(), vec5.end(), [](int x){ cout << x << " "; }); // 12 13 15 19 1 18 16 14
   cout << endl;
 
-        // Reverse
+  // Reverse
   reverse(itera, vec5.end());
   for_each(vec5.begin(), vec5.end(), [](int x){ cout << x << " "; }); // 12 13 15 19 14 16 18 1
   cout << endl;
 
-        // Copy
+  // Copy
   vector<int>vec6(4); //itera points to 1, 4 elements to vec5.end() #UNSAFE
   copy(itera, vec5.end(), vec6.begin()); //copies vec5 from itera to vec5.end() into vec6.begin()
   for_each(vec6.begin(), vec6.end(), [](int x){ cout << x << " "; }); // 14 16 18 1

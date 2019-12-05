@@ -4,7 +4,7 @@ using namespace std;
 
 static bool s_Finished = false;
 
-void DoWork(){
+void doWork(){
     using namespace std::literals::chrono_literals;
 
     cout << "Started thread id=" << this_thread::get_id() << endl;
@@ -17,7 +17,7 @@ void DoWork(){
 }
 
 int main(){
-    thread worker(DoWork);
+    thread worker(doWork);
     cin.get();
     s_Finished = true;
 

@@ -1,27 +1,21 @@
 #include <iostream>
 #include <string>
 
-struct Node
+struct LinkedList
 {
-  int data;
-  Node *next;
+    int data;
+    Node *next = nullptr;
 };
 
-void initNode(Node *head, int n){
-	head->data = n;
-	head->next = NULL;
-}
-
-void addNode(Node *head, int n)
+void addNode(LinkedList& list, int n)
 {
 	Node *newNode = new Node;
     newNode->data = n;
-	newNode->next = NULL;
+	newNode->next = nullptr;
 
-	Node *cur = head;
-	while(cur)
-	{
-		if(cur->next == NULL)
+    Node *cur = list;
+	while(cur->next != nullptr) {
+		if(cur->next == nullptr)
 		{
 			cur->next = newNode;
             return;
@@ -30,50 +24,62 @@ void addNode(Node *head, int n)
     }
 }
 
-void insertFront(Node *head, int n)
+void insertFront(LinkedList& list, int n)
 {
     Node *newNode = new Node;
     newNode->data = n;
     newNode->next = *head;
-    *head = newNode;
+    head = newNode;
 }
 
-void insertEnd(Node *head, int n)
-{
-    Node *newNode = new Node;
-    if (head == NULL)
-    {
-        head->data = n
-        head->next = NULL;
-        return;
-    }
-
-    Node *temp =
-}
-
-Node* searchNode(Node* head, int n)
+Node* searchNode(LinkedList& list, int n)
 {
     Node* cur = head;
-    while(cur){
-        if(cur->data == n) return cur;
+    while(cur->next != nullptr){
+        if(cur->data == n) 
+            return cout << "Node found with value: " << n <<" at " << cur << '.\n'; 
         cur = cur->next;
     }
     cout << "Node " << n << " not found.\n";
 }
 
-bool deleteNode(Node* head, Node *ptrDel)
+int countNode(LinkedList& list)
 {
-    Node* cur = *head;
-    if(ptrDel == *head)
-    {
-        *head = cur->next;
-        delete ptrDel;
-        return true;
+    int count;
+    Node* cur = list.head;
+    if(head->next == nullptr){
+        return 1;
     }
+    while(head->next != nullptr){
+        cur = cur->next;
+        ++count;
+    }
+    return count;
+}
 
-    while(cur)
-    {
-        if(cur->next == ptrDel)
-        {
-            cur->next = ptrDel->next;
-            delete ptrDel;
+// TODO
+void deleteNode(Node* head, int index)
+{
+    Node* cur = head;
+    Node* prev = new Node;
+    if(index < 1 || index > countNode(head){
+        cout << "index out of bounds\n";
+        return;
+    }
+    for(int i=0; i<index; ++i){
+        cur = cur->next;
+        
+    };
+    Node* temp = new Node;
+    temp->next = cur->next;
+    prev->next = cur->next;
+    delete temp;
+}
+
+int main(){
+    LinkedList list = new LinkedList();
+    addNode(list, 3);
+    addNode(list, 5);
+    addNode(list, 7);
+    addNode(list, 9);
+    printNode(list, 
