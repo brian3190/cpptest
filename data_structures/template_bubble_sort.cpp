@@ -16,14 +16,10 @@ void bubbleSort(TContainer begin,TContainer end) {
 }
 
 int main(){
-
-std::vector<int> myvec{17,31,5,70,9,15};
-
-bubbleSort(myvec.begin(), myvec.end());
-
-for(auto i = myvec.begin(); i != myvec.end(); ++i){
-    std::cout << *i << '\n';
-}
-
-return 0;
+    std::vector<int> myvec{17,31,5,70,9,15};
+    bubbleSort(myvec.begin(), myvec.end());
+    for(auto i = myvec.begin(); i != myvec.end(); ++i){
+        std::cout << *i << '\n';
+    }
+    return 0;
 } 
