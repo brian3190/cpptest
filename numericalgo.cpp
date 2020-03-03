@@ -6,15 +6,14 @@
 
 using namespace std;
 
-int main()
-{
+int main(){
 
 // binary search in STL
 vector<int> vec = {8,9,9,9,45,87,90};
 
 bool found = binary_search(vec.begin(), vec.end(), 9);
 
-cout << found << endl;
+cout << found << endl; //OUTPUT: 1
 
 
 vector<int> s = {9, 45, 66};
@@ -54,14 +53,14 @@ cout << endl;
 
 
 vector<int> vec4 = {1,2,3,4,1,2,3,4,5};
-inplace_merge(vec4.begin(), vec4.begin()+4, vec4.end()); //1 1 2 2 3 3 4 4 5
+inplace_merge(vec4.begin(), vec4.begin()+4, vec4.end()); 
 
 cout << "Inplace Merge:" << endl;
 for (vector<int>::iterator iter=vec4.begin(); iter!=vec4.end(); ++iter)
 {
     cout << ' ' << *iter;
 }
-cout << endl;
+cout << endl; //OUTPUT: 1 1 2 2 3 3 4 4 5
 
 //Set operations in STL
 vector<int> vec5 = {8, 9, 9, 10};

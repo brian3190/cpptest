@@ -25,7 +25,6 @@ int main()
         // std::unique_ptr<Entity> entity(new Entity());
         // entity->Print();
 
-        // 
         std::unique_ptr<Entity> entity = std::make_unique<Entity>();
 
         entity->Print();
